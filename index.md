@@ -16,7 +16,7 @@ To achieve the above purpose, an elaborate framework is proposed. Firstly, natur
 ### COOPERATIVE DECISION MAKING AND TRAJECTORY PLANNING FOR CAVS
 In addition, for the cooperative decision making and trajectory planning of CAVs, the three-layer hierarchy that most autonomous robot controls are using to generate the safe and continuous state is adopted. At the top of the hierarchy, level-k game is introduced to imitate the human reasoning depths and also served as a next-layer's independent variable. Then, based on cooperative game, k-allocation which leads to system optimum can be achieved by enumerating. At the bottom layer, Lattice planner will generate an optimal and collision-free trajectory that conforms to the vehicle's dynamic constraints.
 
-![framework](./framework.pdf)
+![framework](./framework.png)
 
 ## Citation
 ```
