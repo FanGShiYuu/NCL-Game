@@ -12,7 +12,7 @@ High-density, un-signalized intersection has always been a bottleneck of efficie
 
 To achieve the above purpose, an elaborate framework is proposed. Firstly, naturalistic human driving data are collected and analyzed for investigating the driver decision type and its distribution from a real-world intersection. Besides, it has to be noted that modeling heterogeneous drivers mammoth project. Given that this paper is primarily concerned with establishing a cooperative driving framework for CAV, we turn to reproduce the heterogeneous decision for simplification. Then a series of feasible trajectories are generated through non-cooperative game and compare them with expert demonstrations from naturalistic human driving data. Through maximum entropy IRL, different decision-making preferences are calibrated. We then reproduce the decision of heterogeneous HVs with Nash Equilibrium solution and generate the corresponding next state through vehicle dynamics. 
 
-
+<img src="./framework.pdf" style="width:90%;">
 
 ## Citation
 ```
