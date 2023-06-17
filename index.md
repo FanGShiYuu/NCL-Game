@@ -1,24 +1,17 @@
-# GameFormer
+# Cooperative Driving of Connected Autonomous Vehicles in Heterogeneous Mixed Traffic: A Game Theoretic Approach
 
-[Zhiyu Huang](https://mczhi.github.io/), [Haochen Liu](https://scholar.google.com/citations?user=iizqKUsAAAAJ&hl=en), [Chen Lv](https://scholar.google.com/citations?user=UKVs2CEAAAAJ&hl=en) 
+[Shiyu Fang](https://tops.tongji.edu.cn/info/1033/1190.htm), [Peng Hang](https://tops.tongji.edu.cn/info/1031/1383.htm), [Jian Sun](https://tops.tongji.edu.cn/info/1031/1187.htm)  
 
-[AutoMan Research Lab, Nanyang Technological University](https://lvchen.wixsite.com/automan)
+[Department of Traffic Engineering and Key Laboratory of Road and Traffic Engineering, Ministry of Education, Tongji University](https://tops.tongji.edu.cn/)  
 
 ## Abstract
 
-Autonomous vehicles operating in complex real-world environments require accurate predictions of interactive behaviors between traffic participants. While existing works focus on modeling agent interactions based on their past trajectories, their future interactions are often ignored. This paper addresses the interaction prediction problem by formulating it with hierarchical game theory and proposing the GameFormer framework to implement it. Specifically, we present a novel Transformer decoder structure that uses the prediction results from the previous level together with the common environment background to iteratively refine the interaction process. Moreover, we propose a learning process that regulates an agent's behavior at the current level to respond to other agents' behaviors from the last level. Through experiments on a large-scale real-world driving dataset, we demonstrate that our model can achieve state-of-the-art prediction accuracy on the interaction prediction task. We also validate the model's capability to jointly reason about the ego agent's motion plans and other agents' behaviors in both open-loop and closed-loop planning tests, outperforming a variety of baseline methods.
+High-density, un-signalized intersection has always been a bottleneck of efficiency and safety. The emergence of Connected Autonomous Vehicles (CAVs) results in a mixed traffic condition, further increasing the complexity of the transportation system. Against this background, this paper aims to study the intricate and heterogeneous interaction of vehicles and conflict resolution at the high-density, mixed, un-signalized intersection. Theoretical insights about the interaction between CAVs and Human-driven Vehicles (HVs) and the cooperation of CAVs are synthesized, based on which a novel cooperative decision-making framework in heterogeneous mixed traffic is proposed. Normalized Cooperative game is concatenated with Level-k game (NCL game) to generate a system optimal solution. Then Lattice planner generates the optimal and collision-free trajectories for CAVs. To reproduce HVs in mixed traffic, interactions from naturalistic human driving data are extracted as prior knowledge. Non-cooperative game and Inverse Reinforcement Learning (IRL) are integrated to mimic the decision making of heterogeneous HVs. Finally, three cases are conducted to verify the performance of the proposed algorithm, including the comparative analysis with different methods, the case study under different Rates of Penetration (ROP) and the interaction analysis with heterogeneous HVs. It is found that the proposed cooperative decision-making framework is beneficial to the driving conflict resolution and the traffic efficiency improvement of the mixed un-signalized intersection. Besides, due to the consideration of driving heterogeneity, better human-machine interaction and cooperation can be realized in this paper. 
 
 ## Method Overview
-The proposed framework draws inspiration from the hierarchical game-theoretic modeling of agent interactions. The framework encodes the historical states of agents and maps as background information. A level-0 agent's future trajectories are decoded independently, based on the initial modality query. At level-k, an agent responds to all other level-(k-1) agents. Scene context encoding is obtained via a Transformer-based encoder. The level-0 decoder takes the modality embedding and agent history encodings as query and outputs level-0 future trajectories and scores. The level-k decoder incorporates a self-attention module to model the level-(k-1) future interactions and appends this information to the scene context encoding.
 
+To achieve the above purpose, an elaborate framework is proposed. Firstly, naturalistic human driving data are collected and analyzed for investigating the driver decision type and its distribution from a real-world intersection. Besides, it has to be noted that modeling heterogeneous drivers mammoth project. Given that this paper is primarily concerned with establishing a cooperative driving framework for CAV, we turn to reproduce the heterogeneous decision for simplification. Then a series of feasible trajectories are generated through non-cooperative game and compare them with expert demonstrations from naturalistic human driving data. Through maximum entropy IRL, different decision-making preferences are calibrated. We then reproduce the decision of heterogeneous HVs with Nash Equilibrium solution and generate the corresponding next state through vehicle dynamics. 
 
-## Interaction Prediction
-Given agents' tracks for the past 1 second on a corresponding map, predict the joint future positions of 2 interacting agents for 8 seconds into the future.
-
-
-
-## Closed-loop planning testing
-The planner outputs a planned trajectory at each time step, which is used to simulate the vehicle’s state at the next time step. The other agents are replayed from a log according to their observed states in open-loop.
 
 
 ## Citation
@@ -33,4 +26,4 @@ The planner outputs a planned trajectory at each time step, which is used to sim
 
 ## Contact
 
-If you have any questions, feel free to contact us (zhiyu001@e.ntu.edu.sg).
+If you have any questions, feel free to contact us (2111219@tongji.edu.cn).
