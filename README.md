@@ -1,4 +1,4 @@
-# NCL-Game
+# NCLGame&IRL
 A game theoretic approach for cooperative driving in the heterogeneous mixed un-signalized intersection
 
 Keywords: connected autonomous vehicles, heterogeneous mixed traffic, un-signalized intersection, level-k game, inverse reinforcement learning, cooperative driving
