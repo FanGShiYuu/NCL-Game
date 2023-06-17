@@ -1,6 +1,6 @@
 # Cooperative Driving of Connected Autonomous Vehicles in Heterogeneous Mixed Traffic: A Game Theoretic Approach
 
-[Shiyu Fang](https://tops.tongji.edu.cn/info/1033/1190.htm), [Peng Hang](https://tops.tongji.edu.cn/info/1031/1383.htm), [Jian Sun](https://tops.tongji.edu.cn/info/1031/1187.htm)  
+**[Shiyu Fang](https://tops.tongji.edu.cn/info/1033/1190.htm)**, [Peng Hang](https://tops.tongji.edu.cn/info/1031/1383.htm), [Jian Sun](https://tops.tongji.edu.cn/info/1031/1187.htm)  
 
 [Department of Traffic Engineering and Key Laboratory of Road and Traffic Engineering, Ministry of Education, Tongji University](https://tops.tongji.edu.cn/)  
 
@@ -10,17 +10,23 @@ High-density, un-signalized intersection has always been a bottleneck of efficie
 
 ## Method Overview
 
+### REPRODUCING HETEROGENEOUS HV 
 To achieve the above purpose, an elaborate framework is proposed. Firstly, naturalistic human driving data are collected and analyzed for investigating the driver decision type and its distribution from a real-world intersection. Besides, it has to be noted that modeling heterogeneous drivers mammoth project. Given that this paper is primarily concerned with establishing a cooperative driving framework for CAV, we turn to reproduce the heterogeneous decision for simplification. Then a series of feasible trajectories are generated through non-cooperative game and compare them with expert demonstrations from naturalistic human driving data. Through maximum entropy IRL, different decision-making preferences are calibrated. We then reproduce the decision of heterogeneous HVs with Nash Equilibrium solution and generate the corresponding next state through vehicle dynamics. 
 
-<img src="./framework.pdf" style="width:90%;">
+### COOPERATIVE DECISION MAKING AND TRAJECTORY PLANNING FOR CAVS
+In addition, for the cooperative decision making and trajectory planning of CAVs, the three-layer hierarchy that most autonomous robot controls are using to generate the safe and continuous state is adopted. At the top of the hierarchy, level-k game is introduced to imitate the human reasoning depths and also served as a next-layer's independent variable. Then, based on cooperative game, k-allocation which leads to system optimum can be achieved by enumerating. At the bottom layer, Lattice planner will generate an optimal and collision-free trajectory that conforms to the vehicle's dynamic constraints.
+
+![framework](./framework.pdf)
 
 ## Citation
 ```
-@article{huang2023gameformer,
-  title={GameFormer: Game-theoretic Modeling and Learning of Transformer-based Interactive Prediction and Planning for Autonomous Driving},
-  author={Huang, Zhiyu and Liu, Haochen and Lv, Chen},
-  journal={arXiv preprint arXiv:2303.05760},
-  year={2023}
+@misc{fang2023cooperative,
+      title={Cooperative Driving of Connected Autonomous Vehicles in Heterogeneous Mixed Traffic: A Game Theoretic Approach}, 
+      author={Shiyu Fang and Peng Hang and Chongfeng Wei and Yang Xing and Jian Sun},
+      year={2023},
+      eprint={2305.03563},
+      archivePrefix={arXiv},
+      primaryClass={cs.MA}
 }
 ```
 
