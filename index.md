@@ -19,7 +19,7 @@ Firstly, we conducted a comparison to assess the consistency between the reprodu
 
 Secondly, we visualize the reproduced HV trajectories and the actual trajectories, as shown in Figure below. The Result shows that the reproduced trajectories highly coincide with the actual trajectories. To further compare the similarity of the trajectories between reproduced HV trajectories and the actual trajectories, we employ Dynamic Time Warping (DTW) which minimizes the effects of shifting and distortion in time through a flexible transformation/mapping of time.
 
-![Actionset](./Reproduce-traj.png)
+![Reproduce-traj](./Reproduce-traj.png)
 
 ### COOPERATIVE DECISION MAKING AND TRAJECTORY PLANNING FOR CAVS
 In addition, for the cooperative decision making and trajectory planning of CAVs, the three-layer hierarchy that most autonomous robot controls are using to generate the safe and continuous state is adopted. At the top of the hierarchy, level-k game is introduced to imitate the human reasoning depths and also served as a next-layer's independent variable. Then, based on cooperative game, k-allocation which leads to system optimum can be achieved by enumerating. At the bottom layer, Lattice planner will generate an optimal and collision-free trajectory that conforms to the vehicle's dynamic constraints.
