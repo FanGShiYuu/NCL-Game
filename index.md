@@ -23,7 +23,11 @@ Secondly, we visualize the reproduced HV trajectories and the actual trajectorie
 
 To further compare the similarity of the trajectories between reproduced HV trajectories and the actual trajectories, we employ Dynamic Time Warping (DTW) which minimizes the effects of shifting and distortion in time through a flexible transformation/mapping of time.
 
+![Reproduce-traj](./DTW-FIG/figs2.png)
+
 It is not difficult to find that only a relatively small part of the trajectory has been offset, and we use the blue dashed line to represent the DTW calculated correspondence between the two trajectories. At the same time, we choose a case where the reproduced decision is inconsistent with the actual decision. It can be seen that there are obvious differences in trajectories at this time, but since such cases account for a small proportion. Therefore, we believe that the proposed method can better reproduce the trajectories of heterogeneous human drivers. For more data, [DTW-Figs](https://github.com/FanGShiYuu/NCLGame-IRL/tree/pages/DTW-FIG) shows other DTW outputs.
+
+![Reproduce-traj](./DTW-FIG/figs58.png)
 
 
 ### COOPERATIVE DECISION MAKING AND TRAJECTORY PLANNING FOR CAVS
